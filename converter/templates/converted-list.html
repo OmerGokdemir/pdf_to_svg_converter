@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Converted SVG List</title>
+</head>
+<body>
+    <h1>Converted SVG Files</h1>
+    <ul>
+        {% for plan in plans %}
+            <li>
+                PDF: <a href="{{ plan.pdf_file.url }}">{{ plan.pdf_file.name }}</a> |
+                {% if plan.svg_file %}
+                    SVG: <a href="{{ plan.svg_file.url }}">{{ plan.svg_file.name }}</a>
+                {% else %}
+                    SVG: (Henüz dönüştürülmedi)
+                {% endif %}
+            </li>
+        {% empty %}
+            <li>Hiç dosya bulunamadı.</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

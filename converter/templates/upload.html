@@ -1,0 +1,9 @@
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">PDF Yükle ve SVG'ye Dönüştür</button>
+</form>
+
+{% if object.svg_file %}
+  <embed src="{{ object.svg_file.url }}" type="image/svg+xml" width="100%" height="600px"/>
+{% endif %}
