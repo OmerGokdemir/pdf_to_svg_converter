@@ -6,7 +6,7 @@ A lightweight and high-quality solution for converting multi-page PDF architectu
 
 ## 🚀 Features
 
-- ✅ Converts **multi-page PDFs** into **individual SVG files**
+- ✅ Converts **single-page PDFs** into **individual SVG files**
 - ✅ Maintains **high visual quality** using `pdftocairo`
 - ✅ Automatically names output files with a custom prefix
 - ✅ Works smoothly on Windows (Poppler required)
